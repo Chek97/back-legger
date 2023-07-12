@@ -37,7 +37,13 @@ class LeadController extends Controller
         }
     }
 
-    public function download(){
+    public function get(){
 
+        $leads = Lead::all();
+
+        return response()->json(
+            ["ok" => true, "leads" => $leads],
+            200
+        );
     }
 }

@@ -22,4 +22,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::post("/login", [UserController::class, "login"]);
 
+Route::get("/lead", [LeadController::class, "get"]);
 Route::post("/lead", [LeadController::class, "store"]);
